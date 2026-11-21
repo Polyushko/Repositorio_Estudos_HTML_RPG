@@ -1,14 +1,50 @@
-# Grimório do Aventureiro — D&D 5e (2014)
+# Grimório do Aventureiro
 
-Projeto acadêmico em HTML, CSS e JavaScript puro. Extraia o ZIP e abra `index.html` no navegador.
+- **Atividade:** Projeto da disciplina de JavaScript
+- **Tema do website:** Guia interativo de Dungeons & Dragons 5ª edição (2014)
+- **Nome do aluno:** preencha com seu nome antes de entregar.
 
-## O que funciona
-- Catálogo das 12 classes, filtro e pesquisa.
-- Detalhes de nove raças com atributos, traços, tamanho, deslocamento e idiomas.
-- Ficha de nível 1 com atributos finais, duas resistências de classe, escolha de perícias limitada por classe e alternativas de equipamento inicial em cada linha. A ficha calcula PV, CA, iniciativa, proficiência, perícias escolhidas e percepção passiva. Salva, reabre e exclui os dados neste navegador.
-- Chat demonstrativo: ao enviar uma mensagem, avisa que não há partida e indica o Discord do mestre. Nenhuma mensagem é transmitida.
-- Link de convite de teste para Roll20.
-- Layout responsivo e menu para celular.
+## Como abrir
 
-## Escopo das regras
-As descrições foram resumidas a partir das [Basic Rules de classes](https://www.dndbeyond.com/sources/dnd/basic-rules-2014/classes) e [raças](https://www.dndbeyond.com/sources/dnd/basic-rules-2014/races), edição de 2014. O link do Scribd enviado não abriu seu conteúdo neste ambiente, portanto não foi usado como fonte. Os valores inseridos são os atributos **finais**, após ajustes raciais. A ficha não automatiza sub-raças, domínios, antecedentes, estilos de luta, magias, proficiências raciais adicionais nem a lista completa de armas. Quando uma alternativa diz “arma à escolha”, especifique a arma no campo adicional. A CA depende do equipamento escolhido e não inclui efeitos mágicos ou de subclasse. Consulte o mestre para ajustes. A pasta `imagens/` é reservada conforme a estrutura da atividade; a arte atual é CSS.
+Abra `index.html` em um navegador atualizado. O projeto usa HTML, CSS e JavaScript puros; não precisa instalar dependências nem iniciar um servidor.
+
+## Funcionalidades interativas
+
+- Catálogo das 12 classes, com filtro por estilo, pesquisa e painel de detalhes.
+- Consulta de nove raças, com características, tamanho, deslocamento e idiomas.
+- Cadastro de personagem de nível 1: valida nome, classe, raça, atributos, perícias e equipamento; calcula valores da ficha e salva no navegador.
+- Fichas salvas podem ser recuperadas ao reabrir a página ou excluídas pelo botão correspondente.
+- Chat demonstrativo da taverna, com validação e mensagens exibidas na página. As mensagens não são enviadas a um servidor.
+- Menu recolhível em telas pequenas, navegação por âncoras e convite externo para uma mesa no Roll20.
+
+## Conteúdos de JavaScript aplicados
+
+- Variáveis e tipos de dados para personagens, atributos e mensagens.
+- Operadores de comparação, lógicos e aritméticos para filtros, validação e cálculos.
+- Condicionais para validação de dados e cálculo de CA.
+- Repetições e arrays para percorrer classes, raças, atributos e equipamentos.
+- Objetos para descrever classes, raças e fichas.
+- Funções para filtrar, renderizar detalhes e montar e exibir a ficha.
+- DOM e eventos de clique, entrada de texto, seleção e envio de formulários.
+- `localStorage` para guardar a ficha neste navegador.
+
+## Estrutura do projeto
+
+```text
+entrega-dnd/
+|-- index.html
+|-- css/
+|   `-- estilo.css
+|-- js/
+|   |-- regras.js
+|   `-- script.js
+|-- imagens/
+|   `-- LEIA-ME.txt
+`-- README.md
+```
+
+O diretório `imagens/` está reservado para imagens adicionais; a ilustração atual do dado é feita com CSS.
+
+## Regras e escopo
+
+As descrições são resumos introdutórios das [regras básicas de classes](https://www.dndbeyond.com/sources/dnd/basic-rules-2014/classes) e [raças](https://www.dndbeyond.com/sources/dnd/basic-rules-2014/races) da edição de 2014. Os atributos informados na ficha são valores finais, já com os bônus raciais. A ficha calcula valores básicos de nível 1, mas não automatiza sub-raças, subclasses, magias ou todas as proficiências raciais. Confirme escolhas e regras com o mestre.
